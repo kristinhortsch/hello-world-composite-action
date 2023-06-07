@@ -17,5 +17,9 @@ runs:
     - id: random-number-generator
       run: echo "random-number=$(echo $RANDOM)" >> $GITHUB_OUTPUT
       shell: bash
+    - run: echo ${GITHUB_WORKSPACE}
+      shell: bash
+    - run: echo ${{ github.workspace }}
+      shell: bash
     - run: ./goodbye.sh
       shell: bash
